@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Planetary Responsibility: SOLVE</title>
+  <meta name="description" content="An interactive presentation of my five gifts — Detail-Oriented, Analytical, Persistent, Curious, and Organized — and the technology careers they point toward.">
+  <meta name="theme-color" content="#FBF7EF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/slide1.png" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Icon sprite (Lucide icon paths, MIT licence) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></symbol>
+    <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+    <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-maximize" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-minimize" viewBox="0 0 24 24"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-restart" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#deck">Skip to presentation</a>
+
+  <main id="deck" class="deck" aria-roledescription="presentation" aria-label="My Planetary Responsibility: SOLVE">
+
+    <!-- ============ SLIDE 1 — HERO ============ -->
+    <section class="slide slide--hero is-active" id="slide-1" data-title="My Planetary Responsibility: SOLVE" aria-roledescription="slide">
+      <figure class="hero__media">
+        <img src="images/slide1.png" width="1672" height="941" fetchpriority="high" decoding="async"
+             alt="A hiker with a backpack sits on a rocky summit at golden hour, looking out over a winding lake and mountain valley as the sun sets.">
+      </figure>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="hero__inner">
+          <h1 class="hero__title" tabindex="-1">
+            <span class="hero__pre reveal">My Planetary Responsibility</span>
+            <span class="solve-word reveal" aria-label="SOLVE"><span aria-hidden="true">S</span><span aria-hidden="true">O</span><span aria-hidden="true">L</span><span aria-hidden="true">V</span><span aria-hidden="true">E</span></span>
+          </h1>
+          <p class="hero__subtitle reveal">Using my strengths to understand problems, find solutions, and create a positive impact.</p>
+          <p class="hero__quote reveal"><span>One question closer to the answer.</span></p>
+          <button class="hero__begin reveal" type="button" data-action="next" aria-label="Begin the presentation">
+            <span>Begin</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SLIDE 2 — WHAT SOLVE MEANS ============ -->
+    <section class="slide slide--split theme-forest" id="slide-2" data-title="What SOLVE Means to Me" aria-roledescription="slide">
+      <div class="slide__text">
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">02</span><span class="kicker__line" aria-hidden="true"></span></p>
+          <h2 class="title reveal" tabindex="-1">What <span class="solve">SOLVE</span> Means to Me</h2>
+          <p class="lead reveal">I see problems as puzzles.</p>
+          <p class="body reveal">Each challenge is an opportunity to learn, think deeper, and find a better solution.</p>
+          <h3 class="subhead reveal">My Five Strengths</h3>
+          <ul class="strengths" role="list">
+            <li class="reveal"><button class="strength theme-blue" type="button" data-goto="4" aria-label="Detail-Oriented — go to Gift 1">
+              <span class="strength__icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></span>
+              <span class="strength__label">Detail-Oriented</span><span class="strength__gift" aria-hidden="true">Gift 1 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button></li>
+            <li class="reveal"><button class="strength theme-green" type="button" data-goto="5" aria-label="Analytical — go to Gift 2">
+              <span class="strength__icon"><svg class="icon" aria-hidden="true"><use href="#i-puzzle"/></svg></span>
+              <span class="strength__label">Analytical</span><span class="strength__gift" aria-hidden="true">Gift 2 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button></li>
+            <li class="reveal"><button class="strength theme-amber" type="button" data-goto="6" aria-label="Persistent — go to Gift 3">
+              <span class="strength__icon"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg></span>
+              <span class="strength__label">Persistent</span><span class="strength__gift" aria-hidden="true">Gift 3 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button></li>
+            <li class="reveal"><button class="strength theme-rose" type="button" data-goto="7" aria-label="Curious — go to Gift 4">
+              <span class="strength__icon"><svg class="icon" aria-hidden="true"><use href="#i-lightbulb"/></svg></span>
+              <span class="strength__label">Curious</span><span class="strength__gift" aria-hidden="true">Gift 4 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button></li>
+            <li class="reveal"><button class="strength theme-purple" type="button" data-goto="8" aria-label="Organized — go to Gift 5">
+              <span class="strength__icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg></span>
+              <span class="strength__label">Organized</span><span class="strength__gift" aria-hidden="true">Gift 5 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button></li>
+          </ul>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 82% 50%">
+        <img src="images/slide2.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A spiral notebook on a sunlit wooden desk with a handwritten SOLVE checklist: Understand, Explore options, Try, Learn from errors, Find the best solution.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 3 — FEEDBACK ============ -->
+    <section class="slide slide--split theme-forest" id="slide-3" data-title="Feedback That Confirmed My Strengths" aria-roledescription="slide">
+      <div class="slide__text">
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">03</span><span class="kicker__line" aria-hidden="true"></span></p>
+          <h2 class="title title--md reveal" tabindex="-1">Feedback That Confirmed My Strengths</h2>
+          <div class="quotes">
+            <figure class="quote-card quote-card--blue reveal">
+              <figcaption class="quote-card__label"><svg class="icon" aria-hidden="true"><use href="#i-quote"/></svg>Feedback from Mentor 1</figcaption>
+              <blockquote><p>“You're good with data, relationships, patterns, and systems. I see you as a Business Intelligence Analyst.”</p></blockquote>
+            </figure>
+            <figure class="quote-card quote-card--sage reveal">
+              <figcaption class="quote-card__label"><svg class="icon" aria-hidden="true"><use href="#i-quote"/></svg>Feedback from Mentor 2</figcaption>
+              <blockquote><p>“I appreciate your structured, dependable, and goal-oriented approach. I see you in analytical and operations-oriented roles.”</p></blockquote>
+            </figure>
+          </div>
+          <div class="takeaway reveal">
+            <h3 class="subhead">My Takeaway</h3>
+            <p class="body">Both feedbacks pointed to the same thing:</p>
+            <p class="takeaway__line">I have natural strengths that help me <span class="solve">SOLVE</span> problems in different ways.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 72% 50%">
+        <img src="images/slide3.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A bright desk by a window overlooking a river valley, with a laptop, coffee mug, books titled Mentorship, Growth and Opportunities, and an open notebook sketching Feedback, Growth, Strengths and New Perspectives.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 4 — GIFT 1 ============ -->
+    <section class="slide slide--split theme-blue" id="slide-4" data-title="Gift 1: Detail-Oriented" aria-roledescription="slide">
+      <div class="slide__text">
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">04</span><span class="kicker__line" aria-hidden="true"></span>
+            <span class="accent-badge accent-badge--focus" aria-hidden="true"><svg class="icon"><use href="#i-search"/></svg></span></p>
+          <h2 class="title gift-title reveal" tabindex="-1"><span class="gift-title__num">Gift 1:</span> <span class="gift-title__name">Detail-Oriented</span></h2>
+          <p class="lead reveal">I notice what others may miss.</p>
+          <p class="body reveal">I pay attention to small details, inconsistencies, and errors. During Geek Week, I carefully followed instructions, checked my work, and noticed issues that helped me and my teammates fix them early.</p>
+          <div class="careers reveal">
+            <h3 class="careers__title"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Related Careers</h3>
+            <ul class="careers__list" role="list">
+              <li class="reveal">QA Analyst / Software Tester</li>
+              <li class="reveal">Data Quality Analyst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 78% 50%">
+        <img src="images/slide4.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A hand holds a magnifying glass over lines of code on a laptop screen, on a wooden desk beside a coffee mug, a plant and a notebook, with a sunset over a river valley outside.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 5 — GIFT 2 ============ -->
+    <section class="slide slide--split theme-green" id="slide-5" data-title="Gift 2: Analytical" aria-roledescription="slide">
+      <div class="slide__text">
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">05</span><span class="kicker__line" aria-hidden="true"></span>
+            <svg class="network" viewBox="0 0 120 36" aria-hidden="true">
+              <path class="network__line" d="M8 26 L36 10 L64 24 L92 8 L112 22"/>
+              <path class="network__line network__line--b" d="M36 10 L92 8 M8 26 L64 24"/>
+              <circle cx="8" cy="26" r="3.5"/><circle cx="36" cy="10" r="3.5"/><circle cx="64" cy="24" r="3.5"/><circle cx="92" cy="8" r="3.5"/><circle cx="112" cy="22" r="3.5"/>
+            </svg></p>
+          <h2 class="title gift-title reveal" tabindex="-1"><span class="gift-title__num">Gift 2:</span> <span class="gift-title__name">Analytical</span></h2>
+          <p class="lead reveal">I break complex problems into smaller pieces.</p>
+          <p class="body reveal">I look for patterns, relationships, and the reason behind the problem. I enjoy organizing information and using data to find logical solutions.</p>
+          <div class="careers reveal">
+            <h3 class="careers__title"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Related Careers</h3>
+            <ul class="careers__list" role="list">
+              <li class="reveal">Business Intelligence Analyst</li>
+              <li class="reveal">Business Analyst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 80% 50%">
+        <img src="images/slide5.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A hand places the final yellow piece into a colourful jigsaw puzzle on a sunlit wooden table overlooking a river at sunset.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 6 — GIFT 3 ============ -->
+    <section class="slide slide--split theme-amber" id="slide-6" data-title="Gift 3: Persistent" aria-roledescription="slide">
+      <div class="slide__text">
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">06</span><span class="kicker__line" aria-hidden="true"></span>
+            <svg class="ascent" viewBox="0 0 120 36" aria-hidden="true">
+              <path class="ascent__path" d="M4 32 L28 32 L28 24 L52 24 L52 16 L76 16 L76 8 L100 8"/>
+              <circle class="ascent__dot" cx="108" cy="5" r="3.5"/>
+            </svg></p>
+          <h2 class="title gift-title reveal reveal--rise" tabindex="-1"><span class="gift-title__num">Gift 3:</span> <span class="gift-title__name">Persistent</span></h2>
+          <p class="lead reveal reveal--rise">I keep going until I understand and solve the problem.</p>
+          <p class="body reveal reveal--rise">When something doesn’t work, I try different approaches, ask for help when needed (which is a big growth for me), and learn from each error.</p>
+          <p class="emphasis reveal reveal--rise">I don’t give up easily.</p>
+          <div class="careers reveal reveal--rise">
+            <h3 class="careers__title"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Related Careers</h3>
+            <ul class="careers__list" role="list">
+              <li class="reveal">Software Developer</li>
+              <li class="reveal">Systems Analyst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 72% 50%">
+        <img src="images/slide6.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A woman with a backpack climbs a steep rocky ridge at sunrise, with a glowing lake and layered mountains behind her.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 7 — GIFT 4 ============ -->
+    <section class="slide slide--split theme-rose" id="slide-7" data-title="Gift 4: Curious" aria-roledescription="slide">
+      <div class="slide__text">
+        <span class="qmark qmark--a" aria-hidden="true">?</span>
+        <span class="qmark qmark--b" aria-hidden="true">?</span>
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">07</span><span class="kicker__line" aria-hidden="true"></span>
+            <span class="accent-badge accent-badge--wonder" aria-hidden="true"><svg class="icon"><use href="#i-help"/></svg></span></p>
+          <h2 class="title gift-title reveal" tabindex="-1"><span class="gift-title__num">Gift 4:</span> <span class="gift-title__name">Curious</span></h2>
+          <p class="lead reveal">I ask “why?” and want to understand the bigger picture.</p>
+          <p class="body reveal">I enjoy learning new things, exploring different options, and finding the reason behind a problem.</p>
+          <p class="body reveal">During Geek Week, I asked questions, researched on my own, and saw each error as a clue that brought me closer to the answer.</p>
+          <div class="careers reveal">
+            <h3 class="careers__title"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Related Careers</h3>
+            <ul class="careers__list" role="list">
+              <li class="reveal">Data Analyst</li>
+              <li class="reveal">Research Analyst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 84% 50%">
+        <img src="images/slide7.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A smiling woman examines a small electronics board at a desk with a laptop, sticky notes, a map and a sketched notebook, beside a window overlooking a lake at sunset.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 8 — GIFT 5 ============ -->
+    <section class="slide slide--split theme-purple" id="slide-8" data-title="Gift 5: Organized" aria-roledescription="slide">
+      <div class="slide__text">
+        <div class="slide__inner">
+          <p class="kicker reveal"><span class="kicker__num">08</span><span class="kicker__line" aria-hidden="true"></span></p>
+          <h2 class="title gift-title reveal" tabindex="-1"><span class="gift-title__num">Gift 5:</span> <span class="gift-title__name">Organized</span></h2>
+          <p class="lead reveal">I create structure and clear steps so problems become easier to solve.</p>
+          <p class="body reveal">I like to plan, take notes, track progress, and keep information organized.</p>
+          <p class="body reveal">This helps me handle multiple tasks, meet deadlines, and support my team more effectively.</p>
+          <div class="status reveal" aria-hidden="true">
+            <span class="status__step status__step--1"><i></i>To Do</span>
+            <span class="status__bar"></span>
+            <span class="status__step status__step--2"><i></i>In Progress</span>
+            <span class="status__bar status__bar--2"></span>
+            <span class="status__step status__step--3"><i><svg class="icon"><use href="#i-check"/></svg></i>Done</span>
+          </div>
+          <div class="careers reveal">
+            <h3 class="careers__title"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Related Careers</h3>
+            <ul class="careers__list" role="list">
+              <li class="reveal">Project Coordinator</li>
+              <li class="reveal">Operations Analyst</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <figure class="slide__media" style="--focus: 62% 50%">
+        <img src="images/slide8.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="A woman in warm sunlight places a sticky note on a Kanban board with To Do, In Progress and Done columns, beside a desk with a laptop and plants.">
+      </figure>
+    </section>
+
+    <!-- ============ SLIDE 9 — FINALE ============ -->
+    <section class="slide slide--hero slide--finale" id="slide-9" data-title="Bringing It All Together" aria-roledescription="slide">
+      <figure class="hero__media" style="--focus: 70% 50%">
+        <img src="images/slide9.png" width="1672" height="941" loading="lazy" decoding="async"
+             alt="Snow-capped alpine peaks glow at sunset above a lake valley, with a wooden signpost pointing to New Skills, Growth, Opportunities, Impact and My Future.">
+      </figure>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="hero__inner">
+          <p class="kicker reveal"><span class="kicker__num">09</span><span class="kicker__line" aria-hidden="true"></span></p>
+          <h2 class="title reveal" tabindex="-1">Bringing It All Together</h2>
+          <p class="finale__statement reveal">My planetary responsibility is <span class="solve">SOLVE</span>.</p>
+          <p class="body reveal">I use my attention to detail, analytical thinking, persistence, curiosity, and organization to understand problems, find their causes, and work toward practical solutions.</p>
+          <p class="body reveal">These gifts guide me toward careers where I can use data, systems, and problem-solving to make a positive impact.</p>
+          <ul class="gift-row reveal" role="list" aria-label="My five gifts">
+            <li class="theme-blue"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Detail-Oriented</li>
+            <li class="theme-green"><svg class="icon" aria-hidden="true"><use href="#i-puzzle"/></svg>Analytical</li>
+            <li class="theme-amber"><svg class="icon" aria-hidden="true"><use href="#i-mountain"/></svg>Persistent</li>
+            <li class="theme-rose"><svg class="icon" aria-hidden="true"><use href="#i-lightbulb"/></svg>Curious</li>
+            <li class="theme-purple"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg>Organized</li>
+          </ul>
+          <button class="restart reveal" type="button" data-goto="1">
+            <svg class="icon" aria-hidden="true"><use href="#i-restart"/></svg><span>Back to the beginning</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ CHROME: progress, dots, controls ============ -->
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <nav class="dots" aria-label="Slides"></nav>
+
+  <div class="controls" role="group" aria-label="Presentation controls">
+    <button class="ctrl" type="button" data-action="prev" aria-label="Previous slide">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+    </button>
+    <p class="counter" aria-live="polite" aria-atomic="true">
+      <span class="sr-only">Slide </span><span class="counter__current">01</span><span class="counter__sep" aria-hidden="true"> / </span><span class="sr-only"> of </span><span class="counter__total">09</span>
+    </p>
+    <button class="ctrl" type="button" data-action="next" aria-label="Next slide">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </button>
+    <button class="ctrl ctrl--fs" type="button" data-action="fullscreen" aria-label="Enter fullscreen" aria-pressed="false">
+      <svg class="icon" aria-hidden="true"><use href="#i-maximize"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
