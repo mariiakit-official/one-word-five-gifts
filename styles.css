@@ -680,3 +680,12 @@ button { font: inherit; color: inherit; }
   .reveal, .solve-word span { opacity: 1 !important; transform: none !important; }
   .controls, .dots, .progress, .skip-link { display: none; }
 }
+
+/* ---------- Slide 3: keep the longer mentor quotes on one screen ---------- */
+@media (min-width: 861px) {
+  #slide-3 .title--md { font-size: clamp(1.6rem, 2.8 * var(--u), 2.8rem); margin-bottom: clamp(12px, 1.6 * var(--u), 22px); }
+  #slide-3 .kicker { margin-bottom: clamp(10px, 1.4 * var(--u), 20px); }
+  #slide-3 .quote-card { padding-top: clamp(12px, 1.4 * var(--u), 20px); padding-bottom: clamp(12px, 1.4 * var(--u), 20px); }
+  #slide-3 .quote-card blockquote p { font-size: clamp(.95rem, 1.1 * var(--u), 1.1rem); line-height: 1.5; }
+  #slide-3 .takeaway__line { font-size: clamp(1.02rem, 1.4 * var(--u), 1.4rem); }
+}
