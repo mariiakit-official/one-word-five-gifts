@@ -1,5 +1,7 @@
 # My Planetary Responsibility: SOLVE
 
+https://mariiakit-official.github.io/one-word-five-gifts/
+
 An interactive presentation website about my five strengths (Detail-Oriented, Analytical, Persistent, Curious and Organized) and the technology careers they point toward.
 
 **Live site:** *add your GitHub Pages link here after publishing*
