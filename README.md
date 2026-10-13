@@ -8,19 +8,24 @@ An interactive presentation website about my five strengths (Detail-Oriented, An
 
 ## About the presentation
 
-To me, SOLVE means seeing problems as puzzles and using my strengths to understand them, find solutions and create a positive impact. The presentation has nine slides:
+To me, SOLVE means seeing problems as puzzles and using my strengths to understand them, find solutions and create a positive impact. Each gift slide shows who I am today. The slide right after it shows how I will keep growing that gift. The presentation has 14 slides:
 
-| # | Slide | Related careers |
-|---|-------|-----------------|
-| 01 | My Planetary Responsibility: SOLVE | — |
-| 02 | What SOLVE Means to Me | — |
-| 03 | Feedback That Confirmed My Strengths | — |
+| # | Slide | Notes |
+|---|-------|-------|
+| 01 | My Planetary Responsibility: SOLVE | Introduction |
+| 02 | What SOLVE Means to Me | My five strengths |
+| 03 | Feedback That Confirmed My Strengths | Mentor feedback |
 | 04 | Gift 1: Detail-Oriented | QA Analyst / Software Tester, Data Quality Analyst |
-| 05 | Gift 2: Analytical | Business Intelligence Analyst, Business Analyst |
-| 06 | Gift 3: Persistent | Software Developer, Systems Analyst |
-| 07 | Gift 4: Curious | Data Analyst, Research Analyst |
-| 08 | Gift 5: Organized | Project Coordinator, Operations Analyst |
-| 09 | Bringing It All Together | — |
+| 05 | How I Will Develop My Detail-Oriented Gift | Tent set-up: checking every connection |
+| 06 | Gift 2: Analytical | Business Intelligence Analyst, Business Analyst |
+| 07 | How I Will Develop My Analytical Gift | Mountain paths joining into one direction |
+| 08 | Gift 3: Persistent | Software Developer, Systems Analyst |
+| 09 | How I Will Develop My Persistence | A flower growing through stone |
+| 10 | Gift 4: Curious | Data Analyst, Research Analyst |
+| 11 | How I Will Develop My Curiosity | A path toward the unknown |
+| 12 | Gift 5: Organized | Project Coordinator, Operations Analyst |
+| 13 | How I Will Develop My Organizational Skills | Balanced stones by an alpine lake |
+| 14 | Bringing It All Together | Closing |
 
 ## How to navigate
 
@@ -34,7 +39,7 @@ To me, SOLVE means seeing problems as puzzles and using my strengths to understa
 | Fullscreen | The ⛶ button or the **F** key (Esc to exit) |
 | Phone or tablet | Swipe left or right to change slides, scroll up or down to read |
 
-Each slide has its own link, for example `index.html#slide-6` opens Gift 3.
+Each slide has its own link, for example `index.html#slide-8` opens Gift 3.
 
 ## View it on your computer
 
@@ -78,7 +83,12 @@ solve-presentation/
     ├── slide6.png  # Climbing a ridge at sunrise
     ├── slide7.png  # Experimenting with electronics
     ├── slide8.png  # Organizing a Kanban board
-    └── slide9.png  # Alpine signpost: New Skills, Growth, Opportunities, Impact, My Future
+    ├── slide9.png  # Alpine signpost: New Skills, Growth, Opportunities, Impact, My Future
+    ├── develop1.PNG  # Setting up a tent carefully (Detail-Oriented)
+    ├── develop2.PNG  # Mountain paths joining into one direction (Analytical)
+    ├── develop3.PNG  # Flower growing through a crack in stone (Persistent)
+    ├── develop4.PNG  # Mountain path toward the unknown (Curious)
+    └── develop5.PNG  # Balanced stacked stones (Organized)
 ```
 
 ## Built with
@@ -110,8 +120,8 @@ solve-presentation/
 
 ## Editing
 
-- **Change text:** edit the matching `<section id="slide-N">` in `index.html`.
-- **Change a photo:** replace `images/slideN.png` with a new image of the same name. Wide (16:9) images work best.
+- **Change text:** edit the matching `<section id="slide-N">` in `index.html`. The development slides are 5, 7, 9, 11 and 13.
+- **Change a photo:** replace `images/slideN.png` or `images/developN.PNG` with a new image of the same name. Wide (16:9) images work best. If a photo is missing, the slide shows a soft golden background instead of a broken image.
 - **Change colours:** edit the variables at the top of `styles.css` (`:root { … }`).
 
 ---

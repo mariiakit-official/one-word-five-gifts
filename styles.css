@@ -530,8 +530,12 @@ button { font: inherit; color: inherit; }
 
 .dots {
   position: fixed; z-index: 20;
-  left: calc(6.5 * var(--u)); bottom: 22px;
-  display: flex; gap: 6px; align-items: center;
+  left: calc(6.5 * var(--u) - 8px); bottom: 18px;
+  display: flex; gap: 2px; align-items: center;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(251, 247, 239, .78);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
 }
 .dot {
   position: relative;
@@ -688,4 +692,103 @@ button { font: inherit; color: inherit; }
   #slide-3 .quote-card { padding-top: clamp(12px, 1.4 * var(--u), 20px); padding-bottom: clamp(12px, 1.4 * var(--u), 20px); }
   #slide-3 .quote-card blockquote p { font-size: clamp(.95rem, 1.1 * var(--u), 1.1rem); line-height: 1.5; }
   #slide-3 .takeaway__line { font-size: clamp(1.02rem, 1.4 * var(--u), 1.4rem); }
+}
+
+/* =========================================================
+   Development slides ("How I Will Develop…") — 5, 7, 9, 11, 13
+   Mirrored layout: the photograph leads on the left, text on the right.
+   ========================================================= */
+.slide--grow { grid-template-columns: 54% 46%; }
+.slide--grow .slide__text {
+  padding: calc(4.5 * var(--u)) calc(6 * var(--u)) calc(3 * var(--u) + 44px) calc(4.5 * var(--u));
+  background:
+    radial-gradient(110% 70% at 100% 0%, rgba(244, 220, 171, .30), transparent 60%),
+    var(--ivory);
+}
+/* Blend on the photo's right edge instead of the left */
+.slide--grow .slide__media::before {
+  inset: 0 0 0 auto;
+  background: linear-gradient(270deg, var(--ivory) 0%, rgba(251, 247, 239, .55) 40%, rgba(251, 247, 239, 0) 100%);
+}
+.slide--grow .slide__media img { object-position: var(--focus, 50% 50%); }
+
+
+.grow__tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  letter-spacing: .14em; text-transform: uppercase;
+  font-size: .95em;
+}
+.grow__tag .icon { font-size: 1.25em; }
+
+.title--grow { font-size: clamp(1.7rem, 3 * var(--u), 2.9rem); }
+.grow__statement {
+  font: 500 clamp(1.1rem, 1.6 * var(--u), 1.55rem)/1.4 var(--font-display);
+  color: var(--navy);
+  padding-left: clamp(14px, 1.6 * var(--u), 20px);
+  border-left: 3px solid var(--accent);
+  text-wrap: pretty;
+}
+.slide--grow .subhead { margin-top: clamp(18px, 2.6 * var(--u), 32px); }
+.grow__list { list-style: none; padding: 0; margin: 0; display: grid; }
+.grow__item {
+  display: grid; grid-template-columns: auto 1fr; gap: clamp(12px, 1.6 * var(--u), 20px);
+  align-items: baseline;
+  padding: clamp(10px, 1.3 * var(--u), 16px) 0;
+  border-top: 1px solid var(--line);
+}
+.grow__item:last-child { border-bottom: 1px solid var(--line); }
+.grow__num {
+  font: 600 clamp(.85rem, 1 * var(--u), 1rem)/1 var(--font-display);
+  letter-spacing: .08em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.grow__item p {
+  font-size: clamp(1rem, 1.2 * var(--u), 1.18rem);
+  line-height: 1.55;
+  color: var(--navy-soft);
+}
+
+/* If a development photo has not been added yet, show a calm golden-hour field instead of a broken image */
+.slide__media.is-missing img { visibility: hidden; }
+.slide__media.is-missing {
+  background:
+    radial-gradient(80% 60% at 70% 30%, rgba(244, 196, 110, .55), transparent 70%),
+    linear-gradient(180deg, #f6e3bd 0%, #e9c98f 45%, #8a9a7b 100%);
+}
+
+@media (max-width: 1180px) and (min-width: 861px) {
+  .slide--grow { grid-template-columns: 48% 52%; }
+  .slide--grow .slide__text { padding-left: calc(3.5 * var(--u)); padding-right: calc(5 * var(--u)); }
+}
+@media (max-width: 860px) {
+  .slide--grow .slide__media::before { display: none; }
+  .slide--grow .slide__text { padding: 18px 22px calc(var(--nav-h) + 28px); }
+}
+.slide--grow .kicker { flex-wrap: wrap; row-gap: 8px; }
+.grow__tag { white-space: nowrap; }
+@media (max-width: 420px) { .grow__tag { white-space: normal; } }
+
+/* Meaning line on each development photo */
+.grow__meaning {
+  position: absolute; z-index: 2;
+  left: calc(4.5 * var(--u)); right: 16%;
+  bottom: calc(3 * var(--u) + 46px);
+  max-width: 22em;
+  padding-left: clamp(12px, 1.4 * var(--u), 18px);
+  border-left: 3px solid var(--gold);
+  font: 500 clamp(1.1rem, 1.9 * var(--u), 1.85rem)/1.3 var(--font-display);
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(20, 33, 61, .45);
+  text-wrap: balance;
+}
+.slide__media--grow::after {
+  background:
+    linear-gradient(0deg, rgba(20, 33, 61, .62) 0%, rgba(20, 33, 61, .2) 30%, rgba(20, 33, 61, 0) 48%),
+    linear-gradient(180deg, rgba(217, 164, 65, .06), transparent);
+}
+@media (max-width: 860px) {
+  .grow__meaning { left: 22px; right: 22px; bottom: 22px; font-size: 1.15rem; }
+  .slide__media--grow::after { background: linear-gradient(0deg, rgba(20, 33, 61, .6), rgba(20, 33, 61, 0) 55%); }
 }

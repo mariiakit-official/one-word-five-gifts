@@ -216,6 +216,15 @@
 
   /* ---------- Init ---------- */
 
+  // If a photograph is missing, show a soft golden-hour panel instead of a broken image
+  slides.forEach((s) => s.querySelectorAll("img").forEach((img) => {
+    const fig = img.closest("figure");
+    const mark = () => fig && fig.classList.add("is-missing");
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) mark();
+    img.addEventListener("error", mark);
+    img.addEventListener("load", () => fig && fig.classList.remove("is-missing"));
+  }));
+
   assignRevealOrder();
   buildDots();
   counterTotal.textContent = pad(total);
